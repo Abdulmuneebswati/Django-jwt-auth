@@ -3,7 +3,6 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from datetime import date
 
-
 def validate_dob(value):
     today = date.today()
     age = today.year - value.year - ((today.month, today.day) < (value.month, value.day))
@@ -54,6 +53,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.username
 
-    @property
-    def is_authenticated(self):
-        return True  # Always returns True for any user
+    # @property
+    # def is_authenticated(self):
+    #     return True  # Always returns True for any user
