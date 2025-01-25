@@ -65,7 +65,7 @@ class ProductUpdateView(APIView):
         
 class ProductDeleteView(APIView):
     permission_classes = [IsAuthenticated]
-    def patch(self, request, id):
+    def delete(self, request, id):
         try:
             product = Product.objects.get(id=id)
             if request.user.id != product.owner.id:
