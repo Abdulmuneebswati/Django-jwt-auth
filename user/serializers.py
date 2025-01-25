@@ -9,12 +9,6 @@ from product.serializers import ProductSerializer
 from rest_framework import serializers
 from .models import User
 
-class UserSerializer(serializers.ModelSerializer):
-    products = ProductSerializer(many=True, read_only=True)  # Add the related products
-
-    class Meta:
-        model = User
-        fields = ['id', 'name', 'username', 'email', 'dob', 'created_at', 'updated_at', 'products']
 
 class UserSerializer(serializers.ModelSerializer):
     products = ProductSerializer(many=True, read_only=True)

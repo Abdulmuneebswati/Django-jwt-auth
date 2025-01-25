@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-bwxidc)-1s=wpmt8@p81%q2ohh6r!b!+32v*!fohkx!uk4bppx
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
